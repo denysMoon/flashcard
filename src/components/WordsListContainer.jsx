@@ -13,7 +13,6 @@ const WordslistContainer = () => {
     }
   };
 
-  console.log(words);
   return (
     <Grid container spacing={2} justifyContent="space-between">
       {showWords()}
