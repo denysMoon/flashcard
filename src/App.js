@@ -3,13 +3,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import Header from "./components/Header";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import { theme } from "./utils/muiTheme";
 import { Container } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getWords } from "./redux/actions";
+import WordslistContainer from "./components/WordsListContainer";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,9 @@ const App = () => {
       <Router>
         <CssBaseline />
         <Header />
-        <Container>Container</Container>
+        <Container sx={{ mt: 2 }}>
+          <WordslistContainer />
+        </Container>
       </Router>
     </ThemeProvider>
   );

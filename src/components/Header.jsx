@@ -7,7 +7,7 @@ import Link from "@mui/material/Link";
 const Header = () => {
   return (
     <Box>
-      <AppBar sx={{ background: "white" }}>
+      <AppBar position="static" sx={{ background: "white" }}>
         <Toolbar>
           <LinkRouter>
             <Link component="button" underline="none">
