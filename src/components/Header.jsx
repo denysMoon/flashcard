@@ -1,19 +1,14 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import { Link as LinkRouter } from "react-router-dom";
-import Link from "@mui/material/Link";
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <Box>
-      <AppBar position="static" sx={{ background: "white" }}>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" sx={{ background: "none" }}>
         <Toolbar>
-          <LinkRouter>
-            <Link component="button" underline="none">
-              All Words
-            </Link>
-          </LinkRouter>
+          <Navigation />
         </Toolbar>
       </AppBar>
     </Box>

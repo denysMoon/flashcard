@@ -10,7 +10,7 @@ import { Container } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getWords } from "./redux/actions";
-import WordslistContainer from "./components/WordsListContainer";
+import AppRoute from "./components/AppRoute";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const App = () => {
         <CssBaseline />
         <Header />
         <Container sx={{ mt: 2 }}>
-          <WordslistContainer />
+          <AppRoute />
         </Container>
       </Router>
     </ThemeProvider>
