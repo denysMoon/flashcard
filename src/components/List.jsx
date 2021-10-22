@@ -6,6 +6,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useSelector } from "react-redux";
 
+import Spinner from "./Spinner";
+
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -58,9 +60,16 @@ const List = () => {
     }
   };
 
+  const showSpinner = () => {
+    if (!words.length) {
+      return <Spinner />;
+    }
+  };
+
   return (
     <>
       <NewWord />
+      {showSpinner()}
       <TableContainer component={Paper} sx={{ mt: 2 }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableBody>{allWords()}</TableBody>
