@@ -1,3 +1,7 @@
-a {
-  text-decoration: none;
+/* Slider */
+
+.slides > .slick-prev:before,
+.slides > .slick-next:before {
+  color: black;
+  z-index: 1;
 }

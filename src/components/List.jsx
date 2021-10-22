@@ -25,16 +25,12 @@ const List = () => {
   const words = useSelector((store) => store.words.words);
   const dispatch = useDispatch();
 
-  // const buttonDelete = () => {
-  //   dispatch(deleteWord(item._id));
-  // };
-
   const allWords = () => {
     if (words) {
       return [...words].reverse().map((item) => {
         return (
           <TableRow
-            key={item.word1}
+            key={item._id}
             sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
           >
             <TableCell component="th" scope="row">

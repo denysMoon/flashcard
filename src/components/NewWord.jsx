@@ -98,7 +98,7 @@ const NewWord = () => {
               sx={{ mt: 2 }}
             >
               <Typography variant="button" sx={{ lineHeight: 1 }}>
-                Post
+                Add
               </Typography>
             </Button>
           </form>
